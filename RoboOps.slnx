@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/RoboOps.Api/RoboOps.Api.csproj" />
+    <Project Path="backend/RoboOps.Worker/RoboOps.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RoboOps.Api.Tests/RoboOps.Api.Tests.csproj" />
+  </Folder>
+</Solution>

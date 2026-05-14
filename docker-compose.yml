@@ -1,0 +1,40 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/RoboOps.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      Auth__SigningKey: roboops-local-development-signing-key-change-me
+    ports:
+      - "5157:8080"
+    depends_on:
+      - postgres
+      - redis
+
+  operator-console:
+    build:
+      context: frontend/operator-console
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: roboops
+      POSTGRES_PASSWORD: roboops
+      POSTGRES_DB: roboops
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:8-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres-data:
