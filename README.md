@@ -78,6 +78,18 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+## Screenshots
+
+Representative previews of the local experience (run the apps above for the interactive UI and live data).
+
+![Operator console](docs/screenshots/operator-console.png)
+
+*Operator console: teleoperation view, telemetry, controls, and pipeline summary.*
+
+![API health check](docs/screenshots/api-health.png)
+
+*`GET /health` JSON response.*
+
 ### Troubleshooting
 
 **GitHub CLI (`gh auth login`) fails after browser success**
