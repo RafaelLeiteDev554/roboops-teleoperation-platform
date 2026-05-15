@@ -63,6 +63,21 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+### Troubleshooting
+
+**GitHub CLI (`gh auth login`) fails after browser success**
+
+Some networks block `api.github.com` while `github.com` still works. If `gh auth login` errors on `https://api.github.com/graphql`, skip `gh` for auth and use Git directly: create an empty repository in the browser, add `origin`, then `git push` over HTTPS.
+
+**Device login opens the wrong browser**
+
+Set the browser explicitly before `gh auth login`, for example:
+
+```powershell
+$env:GH_BROWSER = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+gh auth login
+```
+
 Demo credentials used by the UI:
 
 - Username: `admin`
