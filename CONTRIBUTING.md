@@ -7,6 +7,7 @@ RoboOps is a portfolio project, but changes should be handled like a professiona
 Run these before opening a pull request:
 
 ```bash
+cp frontend/operator-console/.env.example frontend/operator-console/.env.local
 dotnet test RoboOps.slnx
 cd frontend/operator-console
 npm ci

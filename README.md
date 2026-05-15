@@ -39,6 +39,21 @@ docs/
   workflows/         CI pipeline
 ```
 
+## Environment variables
+
+| Name | Where | Purpose |
+| --- | --- | --- |
+| `VITE_API_BASE_URL` | Operator console (Vite) | Base URL for REST and SignalR (default `http://localhost:5157`). |
+| `Auth__SigningKey` | API (`appsettings` or env) | Symmetric key for signing demo JWTs. Override in any non-local deployment. |
+
+Local frontend setup:
+
+```bash
+cp frontend/operator-console/.env.example frontend/operator-console/.env.local
+```
+
+See also the repo root [`.env.example`](.env.example) for a single copy-paste reference used with Docker or shell exports.
+
 ## Run locally
 
 Prerequisites:
