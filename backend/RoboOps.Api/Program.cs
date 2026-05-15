@@ -154,3 +154,5 @@ api.MapPost("/webrtc/offer", (WebRtcOfferRequest request) =>
 app.MapHub<TelemetryHub>("/hubs/telemetry");
 
 app.Run();
+
+public partial class Program;
