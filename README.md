@@ -35,6 +35,7 @@ frontend/
   operator-console/  Vue 3 operator console and dashboards
 docs/
   adr/               Architecture decision records
+  screenshots/       README preview images (replace with your own captures anytime)
 .github/
   workflows/         CI pipeline
 ```
