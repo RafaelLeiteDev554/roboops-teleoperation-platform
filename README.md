@@ -144,6 +144,16 @@ The repository should stay interview-ready:
 - Keep CI green.
 - Document relevant tradeoffs in `docs/adr`.
 
+## Integration tests
+
+Run:
+
+```bash
+dotnet test RoboOps.slnx
+```
+
+The suite includes HTTP integration coverage for authentication, protected resources, and the **teleoperation data path**: starting a session, submitting data-quality feedback, reading the computed quality breakdown, and verifying that the `Operator` role cannot submit reviewer feedback.
+
 ## Current status
 
 The MVP includes an in-memory API, simulated telemetry, demo auth/RBAC, a Vue operator console, quality feedback, mock pipeline status and CI configuration.
