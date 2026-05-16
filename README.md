@@ -101,6 +101,10 @@ Representative previews of the local experience (run the apps above for the inte
 
 ### Troubleshooting
 
+**`Failed to fetch` in the browser console**
+
+The API only allows the Vite dev origin in CORS. Use **`http://localhost:5173`** or **`http://127.0.0.1:5173`** (both are allowed). If you open the UI from another host or port, or call the API over HTTPS while the UI is HTTP, the browser will block the request.
+
 **GitHub CLI (`gh auth login`) fails after browser success**
 
 Some networks block `api.github.com` while `github.com` still works. If `gh auth login` errors on `https://api.github.com/graphql`, skip `gh` for auth and use Git directly: create an empty repository in the browser, add `origin`, then `git push` over HTTPS.
