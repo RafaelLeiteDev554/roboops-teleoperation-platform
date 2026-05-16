@@ -79,6 +79,14 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+### Routes
+
+| Path | Description |
+| --- | --- |
+| `/` | Real-time operator console (SignalR, telemetry, controls) |
+| `/sessions` | List of teleoperation sessions from the API |
+| `/sessions/{id}` | Session detail, robot/task context and quality breakdown |
+
 ## Screenshots
 
 Representative previews of the local experience (run the apps above for the interactive UI and live data).
